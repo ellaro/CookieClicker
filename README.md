@@ -1,2 +1,2 @@
 # CookieClicker
-A selenium project for a game that clicks on the cookie automaticly.
+A Selenium automation project that automatically clicks the cookie in the Cookie Clicker game.
