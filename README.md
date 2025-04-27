@@ -3,7 +3,9 @@ A Selenium automation project that automatically clicks the cookie in the Cookie
 Cookie Clicker Bot.
 
 How to run:
+
 The required libraries:
+
 pip install -r requirements.txt
 
 Make sure you have chromedriver.exe placed in your project directory.
