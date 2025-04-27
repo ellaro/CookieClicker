@@ -1,6 +1,19 @@
 # CookieClicker
 A Selenium automation project that automatically clicks the cookie in the Cookie Clicker game.
-Cookie Clicker Bot
+Cookie Clicker Bot.
+
+How to run:
+The required libraries:
+pip install -r requirements.txt
+
+Make sure you have chromedriver.exe placed in your project directory.
+
+Run the script:
+
+python main.py
+
+
+Watch as the browser automatically opens, interacts with the site, and prints progress messages to the console.
 
 A Python automation script that plays Cookie Clicker automatically using Selenium WebDriver.
 Description
@@ -33,15 +46,6 @@ Install the required libraries:
 
 pip install selenium webdriver-manager
 
-How to Run
-
-    Save the script as cookie_clicker_bot.py.
-
-    Open a terminal or command prompt in the folder containing the file.
-
-    Run the script:
-
-python cookie_clicker_bot.py
 
 What the Script Does
 
