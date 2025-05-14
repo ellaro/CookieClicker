@@ -1,77 +1,130 @@
-# CookieClicker
-A Selenium automation project that automatically clicks the cookie in the Cookie Clicker game.
-Cookie Clicker Bot.
+# 🍪 Cookie Clicker Bot
 
-How to run:
+A powerful **Python + Selenium** automation bot that plays [Cookie Clicker](https://orteil.dashnet.org/cookieclicker/) for you — clicking the big cookie endlessly and logging your cookie count in real-time.
 
-The required libraries:
+---
 
+## 🚀 Features
+
+- Opens **Chrome** browser automatically
+- Selects **English** as the game language
+- Finds and clicks the **big cookie** continuously
+- Logs your current cookie count to the terminal
+- Uses `webdriver-manager` to manage ChromeDriver — **no manual setup needed!**
+
+---
+
+## 🖥️ Prerequisites
+
+- Python **3.7+**
+- Google Chrome browser installed
+- Internet connection (for `webdriver-manager` to download driver)
+
+---
+
+## 📦 Installation
+
+1. Clone this repository or download the project files.
+2. Install required Python packages using:
+
+```bash
 pip install -r requirements.txt
+```
 
-Make sure you have chromedriver.exe placed in your project directory.
+Or manually install:
 
-Run the script:
-
-python main.py
-
-
-Watch as the browser automatically opens, interacts with the site, and prints progress messages to the console.
-
-A Python automation script that plays Cookie Clicker automatically using Selenium WebDriver.
-Description
-
-This script:
-
-    Opens the Chrome browser.
-
-    Navigates to Cookie Clicker.
-
-    Selects English as the language.
-
-    Continuously clicks the big cookie to collect cookies.
-
-    Prints the current cookie count to the console.
-
-Requirements
-
-    Python 3.7+
-
-    selenium package
-
-    webdriver_manager package
-
-    Google Chrome browser installed
-
-Installation
-
-Install the required libraries:
-
+```bash
 pip install selenium webdriver-manager
+```
 
+---
 
-What the Script Does
+## ▶️ How to Run
 
-    Automatically opens the Cookie Clicker website.
+Run the script with:
 
-    Waits for the language selection to appear and chooses English.
+```bash
+python main.py
+```
 
-    Finds the big cookie element (bigCookie).
+It will:
 
-    Starts clicking the cookie extremely fast in an infinite loop.
+- Launch Chrome
+- Open the Cookie Clicker website
+- Select English
+- Start clicking the cookie at **ultra-fast speed**
+- Print your cookie count to the terminal continuously
 
-    Continuously prints the number of cookies collected.
+---
 
-Notes
+## 🧠 How It Works
 
-    The loop is infinite (while True), so you'll need to manually stop the script (CTRL+C or stop it from the terminal).
+```python
+driver.get("https://orteil.dashnet.org/cookieclicker/")
+```
 
-    The time.sleep(0.0000001) slightly delays the clicks but keeps them extremely fast.
+- Navigates to the game site.
 
-    Make sure your ChromeDriver version matches your installed Chrome browser version — this is handled automatically using webdriver_manager.
+```python
+language = driver.find_element(By.XPATH, "//*[contains(text(), 'English')]")
+language.click()
+```
 
-Credits
+- Selects English as the language.
 
-    Based on Cookie Clicker.
+```python
+cookie = driver.find_element(By.ID, "bigCookie")
+```
 
-    Automation by Selenium
-pip install -r requirements.txt
+- Locates the big cookie.
+
+```python
+while True:
+    time.sleep(0.0000001)
+    cookie.click()
+    ...
+```
+
+- Continuously clicks and prints the number of cookies collected.
+
+---
+
+## ⚠️ Notes
+
+- The loop is **infinite**, so use `CTRL+C` to stop the script manually.
+- The line `time.sleep(0.0000001)` introduces a minimal delay to avoid CPU overload.
+- You don’t need to manually download ChromeDriver — it’s managed by `webdriver-manager`.
+
+---
+
+## 📁 Project Structure
+
+```
+cookie-clicker-bot/
+├── main.py               # The automation script
+├── requirements.txt      # Python dependencies
+└── README.md             # Project documentation
+```
+
+---
+
+## 🧪 Testing Ideas (Not Included)
+
+Although this project doesn't include testing, here are ideas for expanding it:
+
+- Verify cookie counter increases after clicks
+- Track click rate and success per second
+- Use `pytest` + `selenium` in headless mode for testing logic
+
+---
+
+## 👩‍💻 Author
+
+Developed with ❤️ for fun, learning, and automation practice.
+
+---
+
+## 🏷 Tags
+
+`#selenium` `#automation` `#cookieclicker` `#python` `#bot` `#qa`
+
